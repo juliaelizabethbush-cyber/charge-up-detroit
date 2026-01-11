@@ -5,17 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Charge Up Detroit | EV & Plug-In Hybrid Charger Installation</title>
 
-  <!-- Google Font -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --primary-dark: #2B2B2B;
-      --primary-blue: #2563EB;
-      --light-gray: #F8FAFC;
-      --border-gray: #E5E7EB;
+      --dark: #2f2f2f;
+      --soft-dark: #4b4b4b;
+      --blue: #2563eb;
+      --light: #f8fafc;
+      --border: #e5e7eb;
     }
 
     * {
@@ -26,269 +27,285 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      color: var(--primary-dark);
-      background-color: #ffffff;
+      color: var(--dark);
+      background: #ffffff;
       line-height: 1.6;
     }
 
-    .logo {
-    height: 200px;
-    width: auto;
-  }
-
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 20px;
+    h1, h2, h3 {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--soft-dark);
+      font-weight: 600;
     }
 
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* NAV */
     header {
-      border-bottom: 1px solid var(--border-gray);
-      padding: 20px 0;
-    }
-
-    .nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding: 20px 40px;
+      border-bottom: 1px solid var(--border);
     }
 
-    .nav a {
-      text-decoration: none;
-      color: var(--primary-dark);
+    header img {
+      height: 36px;
+    }
+
+    nav a {
+      margin-left: 28px;
       font-weight: 500;
-      margin-left: 24px;
+      color: var(--soft-dark);
     }
 
+    /* HERO */
     .hero {
-      padding: 80px 0;
+      position: relative;
+      height: 460px;
+      background: url("hero-ev-charging.jpg") center / cover no-repeat;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.45);
+    }
+
+    .hero-content {
+      position: relative;
+      max-width: 900px;
+      margin: auto;
+      padding: 0 24px;
+      text-align: center;
+      color: #ffffff;
     }
 
     .hero h1 {
       font-size: 42px;
-      font-weight: 700;
-      margin-bottom: 20px;
+      color: #ffffff;
+      margin-bottom: 12px;
     }
 
     .hero p {
       font-size: 18px;
-      max-width: 700px;
-      margin-bottom: 32px;
-      color: #4B5563;
+      margin-bottom: 28px;
     }
 
-    .btn-primary {
-      display: inline-block;
-      background-color: var(--primary-blue);
-      color: #ffffff;
+    .btn {
+      background: var(--blue);
+      color: #fff;
       padding: 14px 28px;
       border-radius: 6px;
       font-weight: 600;
-      text-decoration: none;
+      display: inline-block;
     }
 
-    .btn-note {
-      margin-top: 10px;
-      font-size: 14px;
-      color: #6B7280;
-    }
-
+    /* SECTIONS */
     section {
       padding: 70px 0;
     }
 
-    .light-bg {
-      background-color: var(--light-gray);
+    .light {
+      background: var(--light);
     }
 
-    h2 {
-      font-size: 32px;
-      margin-bottom: 40px;
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 24px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 48px;
+    }
+
+    /* FEATURES */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 36px;
       text-align: center;
     }
 
-    .grid-3 {
+    .features img {
+      height: 60px;
+      margin-bottom: 16px;
+    }
+
+    /* SPLIT */
+    .split {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 40px;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
     }
 
-    .card {
-      background: #ffffff;
-      padding: 30px;
-      border-radius: 8px;
-      border: 1px solid var(--border-gray);
+    .split img {
+      width: 100%;
+      border-radius: 10px;
     }
 
-    .card h3 {
-      margin-bottom: 10px;
-      font-size: 20px;
-    }
-
-    .two-col {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 50px;
-    }
-
-    .steps {
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
-    .step {
-      margin-bottom: 20px;
-      font-size: 18px;
-    }
-
+    /* FORM */
     form {
       max-width: 600px;
-      margin: 0 auto;
+      margin: auto;
       background: #ffffff;
       padding: 40px;
-      border-radius: 8px;
-      border: 1px solid var(--border-gray);
+      border-radius: 10px;
+      border: 1px solid var(--border);
     }
 
     form input,
     form select {
       width: 100%;
-      padding: 12px;
+      padding: 14px;
       margin-bottom: 16px;
       border-radius: 6px;
-      border: 1px solid var(--border-gray);
-      font-size: 16px;
+      border: 1px solid var(--border);
+      font-size: 15px;
     }
 
+    form button {
+      width: 100%;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* FOOTER */
     footer {
-      padding: 40px 0;
-      border-top: 1px solid var(--border-gray);
+      background: #f3f4f6;
+      padding: 28px;
+      text-align: center;
       font-size: 14px;
-      color: #6B7280;
+      color: #6b7280;
     }
 
-    footer .footer-links a {
-      margin-right: 20px;
-      text-decoration: none;
-      color: #6B7280;
+    footer a {
+      margin: 0 10px;
+      font-weight: 500;
+    }
+
+    @media (max-width: 900px) {
+      .split {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        padding: 20px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <div class="container nav">
-      <img src="charge up right size.PNG" alt="Charge Up" class="logo">
-      <nav>
-        <a href="#">Home</a>
-        <a href="/installers.html">For Installers</a>
-      </nav>
-    </div>
-  </header>
+<!-- NAV -->
+<header>
+  <img src="chargeup-logo-transparent.png" alt="Charge Up Detroit Logo">
+  <nav>
+    <a href="#">Home</a>
+    <a href="/installers.html">For Installers</a>
+  </nav>
+</header>
 
-  <!-- HERO -->
-  <section class="hero container">
-    <h1>EV & Plug-In Hybrid Charger Installation in Detroit</h1>
-    <p>
-      Get connected with licensed local installers for fast, code-compliant
-      home and commercial charging solutions.
-    </p>
-    <a href="#form" class="btn-primary">Get Installation Quotes</a>
-    <div class="btn-note">Free to request • No obligation • Local installers only</div>
-  </section>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>EV & Plug-In Hybrid Charger Installation</h1>
+    <p>Professional, code-compliant charging installs across Detroit & Southeast Michigan.</p>
+    <a href="#form" class="btn">Get Installation Quotes</a>
+  </div>
+</section>
 
-  <!-- VALUE PROPS -->
-  <section class="light-bg">
-    <div class="container">
-      <h2>Why Choose Charge Up</h2>
-      <div class="grid-3">
-        <div class="card">
-          <h3>Local Installers</h3>
-          <p>We connect you with vetted electricians serving Detroit and surrounding areas.</p>
-        </div>
-        <div class="card">
-          <h3>Residential & Commercial</h3>
-          <p>From single-family homes to workplaces, apartments, and fleets.</p>
-        </div>
-        <div class="card">
-          <h3>EV & Plug-In Hybrid Ready</h3>
-          <p>Compatible with Tesla, Ford, GM, Toyota, Jeep, and more.</p>
-        </div>
+<!-- FEATURES -->
+<section class="light">
+  <div class="container">
+    <h2 class="section-title">Trusted Local EV Charging Solutions</h2>
+    <div class="features">
+      <div>
+        <img src="icon-local.png" alt="">
+        <p>Local licensed installers</p>
+      </div>
+      <div>
+        <img src="icon-home.png" alt="">
+        <p>Residential Level 2 installs</p>
+      </div>
+      <div>
+        <img src="icon-business.png" alt="">
+        <p>Commercial & fleet charging</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- WHO IT'S FOR -->
-  <section>
-    <div class="container">
-      <h2>Designed for Today’s Electric Drivers</h2>
-      <div class="two-col">
-        <div>
-          <h3>Homeowners</h3>
-          <p>Faster overnight charging, cleaner installs, and more electric-only driving.</p>
-        </div>
-        <div>
-          <h3>Businesses & Property Owners</h3>
-          <p>Workplace, tenant, and fleet charging solutions built to scale.</p>
-        </div>
-      </div>
+<!-- HOME -->
+<section>
+  <div class="container split">
+    <img src="home-ev-charger.jpg" alt="Home EV Charger">
+    <div>
+      <h2>Home Charging Made Simple</h2>
+      <p>Charge your EV or plug-in hybrid faster and more conveniently with a professionally installed Level 2 charger.</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- HOW IT WORKS -->
-  <section class="light-bg">
-    <div class="container">
-      <h2>How It Works</h2>
-      <div class="steps">
-        <div class="step">1. Tell us about your vehicle and location</div>
-        <div class="step">2. We match you with local installers</div>
-        <div class="step">3. Compare options and schedule your install</div>
-      </div>
+<!-- BUSINESS -->
+<section class="light">
+  <div class="container split">
+    <div>
+      <h2>Commercial & Workplace Charging</h2>
+      <p>Support employees, customers, and fleets with scalable EV charging solutions for your business or property.</p>
     </div>
-  </section>
+    <img src="business-ev-charger.jpg" alt="Commercial EV Charging">
+  </div>
+</section>
 
-  <!-- FORM -->
-  <section id="form">
-    <div class="container">
-      <h2>Request EV Charger Installation Quotes</h2>
+<!-- FORM -->
+<section id="form">
+  <div class="container">
+    <h2 class="section-title">Request EV Charger Installation Quotes</h2>
 
-      <form action="https://formspree.io/f/xgoowrwe" method="POST">
-  <input type="text" name="name" placeholder="Full Name" required>
-  <input type="email" name="email" placeholder="Email Address" required>
-  <input type="tel" name="phone" placeholder="Phone Number" required>
+    <form action="https://formspree.io/f/xgoowrwe" method="POST">
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
 
-  <input type="text" name="city" placeholder="City (Detroit, Troy, Dearborn, etc.)" required>
+      <input type="text" name="city" placeholder="City (Detroit, Troy, Dearborn, etc.)" required>
 
-  <select name="property_type" required>
-    <option value="">Property Type</option>
-    <option>Home</option>
-    <option>Business</option>
-  </select>
+      <select name="property_type" required>
+        <option value="">Property Type</option>
+        <option>Home</option>
+        <option>Business</option>
+      </select>
 
-  <select name="vehicle_type" required>
-    <option value="">Vehicle Type</option>
-    <option>Electric Vehicle</option>
-    <option>Plug-In Hybrid</option>
-  </select>
+      <select name="vehicle_type" required>
+        <option value="">Vehicle Type</option>
+        <option>Electric Vehicle</option>
+        <option>Plug-In Hybrid</option>
+      </select>
 
-  <button type="submit" class="btn-primary">Request Quotes</button>
-</form>
-    </div>
-  </section>
+      <button type="submit" class="btn">Request Quotes</button>
+    </form>
+  </div>
+</section>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="container">
-      <p>Serving Detroit & Southeast Michigan</p>
-      <p>Licensed & insured electrical partners • Residential & commercial installs</p>
-      <div class="footer-links">
-        <a href="#">Home</a>
-        <a href="/installers.html">For Installers</a>
-      </div>
-    </div>
-  </footer>
+<!-- FOOTER -->
+<footer>
+  <p>Serving Detroit & Southeast Michigan</p>
+  <p>
+    <a href="#">Home</a> |
+    <a href="/installers.html">For Installers</a>
+  </p>
+</footer>
 
 </body>
 </html>
