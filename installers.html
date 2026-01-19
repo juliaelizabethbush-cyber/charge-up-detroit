@@ -52,7 +52,7 @@
     }
 
     header img {
-      height: 200px;
+      height: 36px;
     }
 
     nav a {
@@ -155,7 +155,7 @@
 
 <!-- NAV -->
 <header>
-  <img src="charge up right size.PNG" alt="Charge Up Detroit">
+  <img src="chargeup-logo-transparent.png" alt="Charge Up Detroit">
   <nav>
     <a href="/">Home</a>
     <a href="/installers.html">For Installers</a>
@@ -197,4 +197,55 @@
     <div class="benefits">
       <div class="benefit">
         <h3>1. Customers Request Quotes</h3>
-        <p>Homeowners and businesses submit EV charger installation requests through Charge Up Detroit.</p
+        <p>Homeowners and businesses submit EV charger installation requests through Charge Up Detroit.</p>
+      </div>
+      <div class="benefit">
+        <h3>2. We Match by City</h3>
+        <p>Leads are routed based on location, property type, and charger needs.</p>
+      </div>
+      <div class="benefit">
+        <h3>3. You Close the Job</h3>
+        <p>You contact the customer, provide pricing, and complete the installation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTALLER FORM -->
+<section class="light">
+  <div class="container">
+    <h2 style="text-align:center;margin-bottom:40px;">Apply to Receive Leads</h2>
+
+    <form action="https://formspree.io/f/xgoowrwe" method="POST">
+      <input type="text" name="company_name" placeholder="Company Name" required>
+      <input type="text" name="contact_name" placeholder="Contact Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+
+      <input type="text" name="service_area" placeholder="Primary Service Cities (e.g. Detroit, Troy, Novi)" required>
+
+      <select name="license_status" required>
+        <option value="">Are you a licensed electrician?</option>
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+
+      <select name="install_types" required>
+        <option value="">Installation Types</option>
+        <option>Residential Only</option>
+        <option>Commercial Only</option>
+        <option>Residential & Commercial</option>
+      </select>
+
+      <button type="submit">Apply for Leads</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>Charge Up Detroit • EV Charger Lead Network</p>
+</footer>
+
+</body>
+</html>
