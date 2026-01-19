@@ -11,6 +11,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
 
   <style>
+    .hero-section {
+  position: relative;
+  background: url('hero-ev-install.jpg') center/cover no-repeat;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.hero-section .hero {
+  position: relative;
+  z-index: 1;
+}
     :root {
       --dark: #2f2f2f;
       --soft-dark: #4b4b4b;
@@ -163,7 +181,8 @@
 </header>
 
 <!-- HERO -->
-<section>
+<section class="hero-section">
+  <div class="hero-overlay"></div>
   <div class="container hero">
     <h1>Get EV Charger Installation Leads</h1>
     <p>Charge Up Detroit connects licensed electricians with high-intent EV and plug-in hybrid customers in your service area.</p>
